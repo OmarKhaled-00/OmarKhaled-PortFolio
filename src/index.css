@@ -1,0 +1,294 @@
+@import "tailwindcss";
+@import "animate.css";
+
+/* ================= ROOT ================= */
+:root {
+  /* ================= BASE BACKGROUND ================= */
+  --bg-primary: #000000;
+  --bg-secondary: #000a14;
+  --bg-deep: #030014;
+  /* ================= BRAND COLORS (CYAN / BLUE SYSTEM) ================= */
+  --primary-cyan: #06b6d4;
+  --primary-cyan-light: #67e8f9;
+  --primary-blue: #0ea5e9;
+  --primary-mid-blue: #051aff;
+  --primary-deep-blue: #1634a0;
+  --primary-border: #1384d0;
+  --primary-accent-blue: #1383af;
+  --primary-gray: #1f2937;
+
+  /* ================= ACCENT COLORS ================= */
+  --accent-teal: #16a085;
+  --accent-gold: #af9513;
+
+  /* ================= TEXT COLORS ================= */
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.8);
+  --text-dark: #000000;
+  /* ================= UI COLORS ================= */
+  --border-default: #1384d0;
+  --button-default: #cdcdcd;
+
+  /* ================= GRADIENTS ================= */
+  --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+  --gradient-secondary: linear-gradient(135deg, #1634a0 0%, #0ea5e9 100%);
+  --gradient-accent: linear-gradient(135deg, #16a085 0%, #0ea5e9 100%);
+  --gradient-dark: linear-gradient(135deg, #000000 0%, #000a14 100%);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100dvh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes startWeb {
+  0% {
+    width: 0%;
+    height: 2px;
+    opacity: 0.5;
+  }
+  40% {
+    width: 100%;
+    height: 2px;
+    opacity: 1;
+  }
+  70% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotateY(65deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateY(65deg) rotateZ(360deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateX(-20%) rotate(-20deg) scale(1);
+  }
+  100% {
+    transform: translateX(20%) rotate(-20deg) scale(1.2);
+  }
+}
+
+@keyframes moveUnderline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes reverseUnderline {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, 30px) scale(1.1);
+  }
+}
+
+/* ================= UTILITIES ================= */
+
+@layer utilities {
+  /* ---------- Animations ---------- */
+
+  .startWebAnimation {
+    animation: startWeb 1.9s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  .loader3d {
+    transform-style: preserve-3d;
+    animation: rotate3d 0.5s linear;
+  }
+
+  .animate-spin-custom {
+    animation: spin 1s linear infinite;
+  }
+
+  .floating_rectangle {
+    animation: float1 15s infinite;
+  }
+
+  .floating_circle {
+    animation: float2 15s infinite;
+  }
+
+  /* ---------- Effects ---------- */
+
+  .glow-border {
+    box-shadow:
+      0 0 10px #22d3ee,
+      0 0 20px #06b6d4,
+      0 0 40px #0891b2,
+      inset 0 0 10px #0891b2;
+  }
+
+  .perspective {
+    perspective: 100px;
+  }
+
+  /* ---------- Background Effects ---------- */
+
+  .lines-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: #030014;
+  }
+
+  .line {
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    opacity: 0.6;
+    filter: blur(20px);
+    transform: rotate(-20deg);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #22d3ee,
+      #67e8f9,
+      #06b6d4,
+      transparent
+    );
+    animation: moveLine 6s ease-in-out infinite alternate;
+  }
+
+  .line1 {
+    top: 40%;
+    animation-duration: 6s;
+  }
+
+  .line2 {
+    top: 50%;
+    opacity: 0.4;
+    animation-duration: 8s;
+  }
+
+  .line3 {
+    top: 60%;
+    opacity: 0.25;
+    animation-duration: 10s;
+  }
+
+  /* ---------- Header Effects ---------- */
+
+  .animate_Header_Underline {
+    position: relative;
+  }
+
+  .animate_Header_Underline::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(to right, #3b82f6, #051aff);
+    animation: reverseUnderline 0.3s forwards;
+  }
+
+  .animate_Header_Underline:hover::before {
+    animation: moveUnderline 0.3s forwards ease;
+  }
+
+  /* ----------  Hero Effects ---------- */
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+
+    background: linear-gradient(
+      135deg,
+      transparent 0%,
+      rgb(3, 16, 47) 50%,
+      transparent 100%
+    );
+
+    background-size: 200% 200%;
+    filter: blur(30px);
+    opacity: 1;
+  }
+
+  /* ========== Scrollbar =========== */
+  .scrollbar-custom::-webkit-scrollbar {
+    height: 6px; /* horizontal */
+    width: 6px; /* vertical */
+  }
+
+  /* Track (background line) */
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Thumb (clean cyan line) */
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 255, 255, 0.2),
+      rgba(0, 255, 255, 0.8),
+      rgba(0, 255, 255, 0.2)
+    );
+    border-radius: 999px;
+  }
+
+  /* Hover state (no shadow) */
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 255, 255, 0.4),
+      rgba(0, 255, 255, 1),
+      rgba(0, 255, 255, 0.4)
+    );
+  }
+}
