@@ -136,15 +136,15 @@ function Projects_section() {
               key={project.id}
               className={` ${
                 isDark
-                  ? "border border-solid border-gray-700 bg-gray-900 hover:border-2 hover:border-(--primary-cyan) max-md:h-140"
-                  : "shadow-[2px_2px_5px_#BABECC,-5px_-5px_10px_#ffffff73]"
-              } relative flex h-130 max-w-110 flex-col justify-between gap-1 overflow-hidden rounded-2xl`}
+                  ? "border border-solid border-gray-700 bg-gray-900 hover:border-2 hover:border-(--primary-cyan) "
+                  : "shadow-[2px_2px_5px_#BABECC,-5px_-5px_10px_#ffffff73] "
+              } relative container flex h-130 max-w-110 flex-col justify-between gap-1 overflow-hidden rounded-2xl max-md:h-fit`}
             >
               <div
                 className={`${
                   isDark
                     ? ""
-                    : " m-auto flex items-center justify-center rounded-xl p-1 shadow-[inset_2px_2px_5px_#BABECC,inset_-5px_-5px_10px_#ffffff73] max-xl:h-75 max-xl:w-120 max-lg:max-h-60 max-lg:w-100 max-md:w-130 xl:h-62 xl:w-102"
+                    : " m-auto flex items-center justify-center rounded-xl p-1 shadow-[inset_2px_2px_5px_#BABECC,inset_-5px_-5px_10px_#ffffff73] max-xl:h-75 max-xl:w-120 max-lg:max-h-60 max-lg:w-100 max-md:w-fit xl:h-62 xl:w-102"
                 }`}
               >
                 <img
@@ -158,13 +158,13 @@ function Projects_section() {
                 />
               </div>
 
-              <div className="flex h-48.75 flex-col justify-between gap-5 p-2">
+              <div className="flex h-48.75 flex-col justify-between gap-5 p-2 max-md:h-fit">
                 <h3
                   className={` ${
                     isDark
                       ? "text-(--text-primary)"
                       : "w-fit rounded-xl p-1 text-(--text-dark) shadow-[2px_2px_5px_#BABECC,-5px_-5px_10px_#ffffff73]"
-                  } text-2xl font-bold capitalize`}
+                  } text-2xl font-bold capitalize max-md:text-lg`}
                 >
                   {project.name}
                 </h3>
