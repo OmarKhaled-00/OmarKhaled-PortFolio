@@ -2,7 +2,7 @@ import Header from "../../components/Header/Header";
 import Hero_Section from "./Sections/Hero_section";
 import AboutMe_section from "./Sections/AboutMe_section";
 import Skills_section from "./Sections/Skills_section";
-import ParticlesBackground from "../../components/particles/particles";
+import ParticlesBackground from "../../components/Particles/Particles";
 import { useAppContext } from "../../context/AppContext";
 import WorkExperience_section from "./Sections/WorkExperience_section";
 const Projects_section = lazy(() => import("./Sections/Projects_section"));

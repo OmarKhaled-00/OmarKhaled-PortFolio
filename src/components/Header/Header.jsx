@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { HashLink } from "react-router-hash-link";
 import { useAppContext } from "../../context/AppContext";
 import { typeWriter } from "../../utils/typeWriter";
-import { ICONS } from "../../constants/Icons/icons";
+import { ICONS } from "../../constants/icons/icons";
 
 function Header() {
   const text = typeWriter(Header_Data.wisdoms, 30, 1500);

@@ -1,4 +1,4 @@
-import { ICONS } from "../../constants/Icons/icons";
+import { ICONS } from "../../constants/icons/icons";
 import light_logo from "../../assets/logo_light1.png";
 import dark_logo from "../../assets/mylogo.png";
 export const Header_Data = {

@@ -1,4 +1,4 @@
-import { ICONS } from "../../constants/Icons/icons";
+import { ICONS } from "../../constants/icons/icons";
 import dev1 from "../../assets/Projects/DevWorld/1.png";
 import dev2 from "../../assets/Projects/DevWorld/2.png";
 import dev3 from "../../assets/Projects/DevWorld/3.png";

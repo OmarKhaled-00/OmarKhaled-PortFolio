@@ -1,4 +1,4 @@
-import { ICONS } from "../../constants/Icons/icons";
+import { ICONS } from "../../constants/icons/icons";
 export const AboutMe_data = {
   profile: {
     img_path: "./me5.png",

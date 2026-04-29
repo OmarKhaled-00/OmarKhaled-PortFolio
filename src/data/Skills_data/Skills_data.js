@@ -1,4 +1,4 @@
-import { ICONS } from "../../constants/Icons/icons";
+import { ICONS } from "../../constants/icons/icons";
 
 export const Skills_data = {
   main_title: {

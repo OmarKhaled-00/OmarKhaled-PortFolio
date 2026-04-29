@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ICONS } from "../../../constants/Icons/icons";
+import { ICONS } from "../../../constants/icons/icons";
 import { Projects_data } from "../../../data/Projects_data/Projects_data";
 import { useAppContext } from "../../../context/AppContext";
 import { useNavigate } from "react-router";
