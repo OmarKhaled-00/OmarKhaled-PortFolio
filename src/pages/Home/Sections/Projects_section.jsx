@@ -209,7 +209,7 @@ function Projects_section() {
               </div>
 
               <div
-                className={`flex items-center justify-evenly p-1.5 *:cursor-pointer *:rounded-2xl *:p-1.5 *:font-bold ${
+                className={`flex items-center justify-evenly p-1.5 *:cursor-pointer *:rounded-2xl *:p-1.5 *:font-bold max-md:text-[12px] ${
                   isDark
                     ? " *:bg-gray-800 *:text-(--primary-cyan) *:hover:border *:hover:border-solid *:hover:border-(--primary-cyan)"
                     : "*:w-fit *:text-(--text-dark) *:shadow-[2px_2px_5px_#BABECC,-5px_-5px_10px_#ffffff73] *:hover:text-(--primary-cyan) *:hover:shadow-[inset_2px_2px_5px_#BABECC,inset_-5px_-5px_10px_#ffffff73]"
