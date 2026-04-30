@@ -7,7 +7,7 @@ export const WorkExperience_data = {
   timeline: [
     {
       id: 1,
-      career_title: "Full Stack Developer",
+      career_title: "Part-time Full Stack Developer",
       career_company: " Art Language Advertising Agency ",
       career_place: " Saudi Arabia - Remotely",
       career_date: {
