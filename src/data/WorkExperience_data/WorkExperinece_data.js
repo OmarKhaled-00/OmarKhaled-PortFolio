@@ -11,7 +11,7 @@ export const WorkExperience_data = {
       career_company: " Art Language Advertising Agency ",
       career_place: " Saudi Arabia - Remotely",
       career_date: {
-        start_date: "Feb 2026",
+        start_date: "Mar 2026",
         end_date: " Present",
       },
       career_discribtion:

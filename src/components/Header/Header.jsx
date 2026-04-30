@@ -112,6 +112,7 @@ function Header() {
                   key={link.id}
                   smooth
                   to={link.to}
+                  onClick={() => set_Is_Menu_Clicked(!is_Menu_Clicked)}
                   style={{
                     animationDelay: `${index * 0.2}s`,
                   }}

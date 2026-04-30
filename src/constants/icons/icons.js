@@ -60,6 +60,8 @@ import {
   faServer,
   faRocket,
   faMicrochip,
+  faBagShopping,
+  faDiagramProject,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faSearchengin,
@@ -140,4 +142,6 @@ export const ICONS = {
   palette: faPalette,
   rocket: faRocket,
   microship: faMicrochip,
+  career: faBagShopping,
+  project: faDiagramProject,
 };
