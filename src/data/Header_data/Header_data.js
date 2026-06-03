@@ -10,7 +10,8 @@ export const Header_Data = {
     {
       id: 1,
       name: "Home",
-      to: "#home",
+      toHash: "#home",
+      to: "home",
     },
     {
       id: 2,

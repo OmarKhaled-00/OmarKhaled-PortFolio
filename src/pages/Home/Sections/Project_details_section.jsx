@@ -5,7 +5,7 @@ import { Projects_data } from "../../../data/Projects_data/Projects_data";
 import { useAppContext } from "../../../context/AppContext";
 import { useNavigate } from "react-router";
 import { useState } from "react";
-import Header from "../../../components/Header/Header";
+import Header_nav from "../../../components/Header/Header_nav";
 import Project_button from "../../../components/Project_button/Project_button";
 function Project_details_section() {
   const navigate = useNavigate();
@@ -21,22 +21,10 @@ function Project_details_section() {
   return (
     <>
       <div className="flex flex-col">
-        <Header />
         <div
           className={` ${isDark ? "bg-black" : "bg-[#dde1e7]"} z-10 mx-auto flex min-h-screen flex-col justify-between gap-10 px-2`}
         >
-          <div className="mt-20 flex h-fit w-full justify-items-start">
-            <button
-              onClick={() => navigate(-1)}
-              className={`cursor-pointer rounded-xl px-4 py-2 font-bold capitalize ${
-                isDark
-                  ? "bg-gray-800 text-(--primary-cyan) disabled:opacity-30"
-                  : "shadow-[2px_2px_5px_#BABECC,-5px_-5px_10px_#ffffff73] hover:shadow-[inset_2px_2px_5px_#BABECC,inset_-5px_-5px_10px_#ffffff73] disabled:opacity-30 "
-              }`}
-            >
-              ← back
-            </button>
-          </div>
+          <Header_nav />
           <div className="flex w-full items-center justify-between gap-4 px-2 max-md:flex-col">
             <h3
               className={`font-bold ${isDark ? "text-(--text-primary)" : "rounded-xl p-2 text-(--text-dark) shadow-[2px_2px_5px_#BABECC,-5px_-5px_10px_#ffffff73]"} text-3xl max-xl:text-2xl`}
