@@ -12,7 +12,7 @@ export const WorkExperience_data = {
       career_place: " Saudi Arabia - Remotely",
       career_date: {
         start_date: "Mar 2026",
-        end_date: " Present",
+        end_date: " june 2026",
       },
       career_discribtion:
         "Developed full-stack web applications and custom WordPress dashboards, delivering seamless digital solutions tailored to user and business needs. Built responsive, modern interfaces using React and Tailwind CSS, with robust backend integration through PHP and WordPress. Delivered scalable, high-performance systems by combining intuitive frontend experiences with efficient backend architecture.",
